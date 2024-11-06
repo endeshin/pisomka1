@@ -1,7 +1,8 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from '../components/Menu';
+import Navbar from '../components/AccountMenu';
+import AccountMenu from "../components/AccountMenu";
 
 export const metadata: Metadata = {
   title: "Pisomka1",
@@ -16,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <body>
+      < AccountMenu/> {/* Use the new Navbar component */}
         {children}
-        <Navbar /> {/* Use the new Navbar component */}
       </body>
     </html>
   );

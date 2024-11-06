@@ -15,6 +15,8 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 
+import Link from 'next/link';
+
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -79,26 +81,34 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleClose}>
-          <Avatar /> Profile
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem 
+        onClick={handleClose}
+        component={Link}
+        href='/o-mne'
+        >
           <Avatar /> My account
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose}
+        component={Link}
+        href='/auth/prihlasenie'
+        >
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
           Add another account
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose}
+        component={Link}
+        href='/auth/registracia'>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
-          Settings
+          Register
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose}
+        component={Link}
+        href='/auth/odhlasenie'>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
