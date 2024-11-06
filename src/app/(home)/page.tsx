@@ -5,7 +5,7 @@ import { authOptions } from "../api/auth/[...nextauth]/authOptions";
 import AuthHomeView from "@/sections/AuthHomeView";
 import NonAuthHomeView from "@/sections/NonAuthHomeView";
 
-export const metadata = { title: "Domov | PokecNaPoker" };
+export const metadata = { title: "prosim funguj" };
 
 export default async function HomePage() {
   // Fetch session on the server
